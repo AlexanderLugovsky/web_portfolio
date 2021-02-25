@@ -1,18 +1,28 @@
-jQuery(document).ready(function($){
+$(function () {
+	$("#includedBackGround").load("background.html");
+});
+$(function () {
+	$("#includedNavBar").load("navbar.html");
+});
+$(function () {
+	$("#includedFooter").load("footer.html");
+});
+jQuery(document).ready(function ($) {
 	var isLateralNavAnimating = false;
-	
 	//open/close lateral navigation
-	$('.cd-nav-trigger').on('click', function(event){
+	$('.cd-nav-trigger').on('click', function (event) {
 		event.preventDefault();
 		//stop if nav animation is running 
-		if( !isLateralNavAnimating ) {
-			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
-			
+		if (!isLateralNavAnimating) {
+			if ($(this).parents('.csstransitions').length > 0) isLateralNavAnimating = true;
+
 			$('body').toggleClass('navigation-is-open');
-			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
 				//animation is over
 				isLateralNavAnimating = false;
 			});
 		}
 	});
 });
+
+

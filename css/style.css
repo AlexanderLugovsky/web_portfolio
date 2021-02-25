@@ -1171,7 +1171,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 /*** SINGLE WORK PAGE SLIDER ***/
 .carousel-indicators {
    bottom: -50px;
-   z-index: 0;
+   z-index: 1;
 }
 
 .carousel-indicators li {
